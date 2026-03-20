@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: #7c3aed;
+  --primary-color: rgb(90, 49, 148);
   --card-color: #c4b5fd;
 
   --bg-color: #f8f7ff;
@@ -28,8 +28,7 @@
 
 header {
   background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 body {
@@ -38,4 +37,21 @@ body {
 
 footer {
   background-color: var(--primary-color);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+
+  color: white;
+}
+
+.logo-container span {
+  border-left: 4px solid white;
+  padding-left: 8px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
 }

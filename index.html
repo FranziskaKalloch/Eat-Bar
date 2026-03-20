@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eat Bar</title>
-    <link rel="stylesheet" href=".styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/wrapper.css" />
+    <link rel="stylesheet" href="./styles/basket.css" />
     <script src="./script/data.js" defer></script>
     <script src="./script/main.js" defer></script>
     <script src="./script/template.js" defer></script>
@@ -13,12 +15,22 @@
   </head>
   <body>
     <header>
-      <div class="content-wrapper-header"></div>
+      <div class="content-wrapper-header">
+        <div class="logo-container">
+          <img class="logo" src="./assets/eat-bar-logo.png" alt="Eat Bar Logo" />
+          <span>food delivery</span>
+        </div>
+        <div>
+          <img src="./assets/icon/icons8-menü-50.png" alt="Menu Icon" />
+        </div>
+      </div>
     </header>
     <div class="content-wrapper-main">
       <section class="meal-wrapper"></section>
       <section class="basket-wrapper"></section>
     </div>
-    <footer></footer>
+    <footer style="display: flex; justify-content: center">
+      <img class="logo" src="./assets/eat-bar-logo.png" alt="Eat Bar Logo" />
+    </footer>
   </body>
 </html>

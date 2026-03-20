@@ -1,5 +1,11 @@
 .content-wrapper-header {
   max-width: 1920px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--padding-medium);
 }
 
 .content-wrapper-main {
@@ -7,7 +13,7 @@
 }
 
 .meal-wrapper {
-  width: padding var(--padding-medium);
+  padding: var(--padding-medium);
 }
 
 .basket-wrapper {
