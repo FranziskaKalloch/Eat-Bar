@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #7c3aed;
+  --card-color: #c4b5fd;
+
+  --bg-color: #f8f7ff;
+  --basket-color: rgb(54, 54, 52);
+
+  --text-color-dark: rgb(54, 54, 52);
+  --text-color-light: white;
+
+  /*   SPACING  */
+  --padding-small: 8px;
+  --padding-medium: 16px;
+  --padding-large: 24px;
+
+  /*   FONT-SIZE */
+
+  --font-size-small: 12px;
+  --font-size-main: 16px;
+  --font-size-large: 24px;
+}
