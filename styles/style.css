@@ -25,3 +25,17 @@
   --font-size-main: 16px;
   --font-size-large: 24px;
 }
+
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+}

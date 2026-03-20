@@ -1,0 +1,15 @@
+.content-wrapper-header {
+  max-width: 1920px;
+}
+
+.content-wrapper-main {
+  display: flex;
+}
+
+.meal-wrapper {
+  width: padding var(--padding-medium);
+}
+
+.basket-wrapper {
+  width: 300px;
+}
