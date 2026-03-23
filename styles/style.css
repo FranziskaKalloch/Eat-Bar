@@ -162,6 +162,7 @@ footer {
   gap: 16px;
 
   height: 60px;
+  padding-left: 32px;
 
   color: white;
 }
@@ -181,12 +182,10 @@ footer {
 /* CARD CONTAINER */
 
 .card-container {
-  background-color: var(--card-color);
-
-  padding: 12px;
-  max-width: 700px;
-
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Abstand zwischen Karten */
+  padding-left: 32px;
 }
 
 .menu-section {
@@ -194,8 +193,14 @@ footer {
 }
 
 .single-menu {
+  background-color: var(--card-color);
   display: flex;
   gap: 32px;
+
+  padding: 12px;
+  max-width: 700px;
+
+  border-radius: 8px;
 }
 
 .menu-img img {

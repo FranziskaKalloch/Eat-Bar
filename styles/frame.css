@@ -1,7 +1,6 @@
 .frame-header {
   max-width: 1440px;
   width: 100%;
-  padding-inline: var(--padding-large);
 
   display: flex;
   justify-content: space-between;
@@ -17,9 +16,10 @@
 }
 
 .frame-meal {
-  padding-left: var(--padding-xl);
   padding-top: 16px;
   padding-bottom: 16px;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .frame-basket {
