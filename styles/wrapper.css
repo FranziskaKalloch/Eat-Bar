@@ -5,17 +5,31 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: var(--padding-medium);
+  padding-inline: var(--padding-large);
 }
 
 .content-wrapper-main {
-  display: flex;
+  max-width: 1920px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  gap: 4px;
 }
 
 .meal-wrapper {
-  padding: var(--padding-medium);
+  padding-left: var(--padding-xl);
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .basket-wrapper {
   width: 300px;
+  position: absolute;
+  top: 500px;
+  right: 0;
+
+  background-color: var(--basket-color);
 }
