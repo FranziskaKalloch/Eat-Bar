@@ -25,7 +25,7 @@ let burgers = [
   {
     name: 'Double Beef Burger',
     description: '300g Beef, Double cheese, Onions, Chili cheese sauce',
-    img: './assets/img/double-beef-cheeseburger.jpg',
+    img: './assets/img/double-beef-cheeseburg.jpg',
     price: 15.9,
   },
 

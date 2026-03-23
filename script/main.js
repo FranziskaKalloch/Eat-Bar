@@ -1,15 +1,11 @@
 function init() {
-  console.log('Funktion init funktioniert');
-
   let burgerRef = document.getElementById('burgerCards');
-  console.log(burgerRef);
 
-  let singleBurger = burgers[0];
-  console.log(singleBurger);
+  for (let index = 0; index < burgers.length; index++) {
+    const singleBurger = burgers[index];
+    console.log(singleBurger.name);
 
-  console.log(singleBurger.name);
-
-  burgerRef.innerHTML += `
+    burgerRef.innerHTML += `
   
     <div class="single-menu">
                 <div class="menu-img">
@@ -19,7 +15,7 @@ function init() {
                 <div class="menu-info">
                   <div class="menu-head">
                     <h3>${singleBurger.name}</h3>
-                    <p>${singleBurger.price}</p>
+                    <p>${singleBurger.price} €</p>
                   </div>
 
                   <div class="menu-description">
@@ -32,4 +28,5 @@ function init() {
                 </div>
               </div>
   `;
+  }
 }
