@@ -16,9 +16,10 @@
 
   /*   SPACING  */
   --padding-small: 8px;
-  --padding-medium: 16px;
-  --padding-large: 32px;
-  --padding-xl: 62px;
+  --padding-normal: 16px;
+  --padding-medium: 32px;
+  --padding-large: 64px;
+  --padding-xl: 120px;
 
   /*   FONT-SIZE */
 
@@ -65,15 +66,13 @@ footer {
 .welcome {
   display: flex;
   flex-direction: column;
+  position: relative; /*Bezugspunkt zum Imbisswagen icon*/
 }
 
 .main-img {
   max-width: 100%;
   height: 250px;
   object-fit: cover;
-
-  position: relative;
-  display: block;
 }
 
 .main-icon {
@@ -81,12 +80,12 @@ footer {
   height: 100px;
 
   border-radius: 50%;
-  object-fit: contain;
 
+  object-fit: contain;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -10%);
+  bottom: 40%;
+  /*transform: translate(-50%, -50%);*/
 }
 
 .headline {
@@ -95,7 +94,7 @@ footer {
   justify-content: center;
   align-items: center;
 
-  padding: var(--padding-xl);
+  padding: var(--padding-large);
   gap: 16px;
 }
 
@@ -146,7 +145,7 @@ footer {
 
   gap: 16px;
   padding-inline: var(--padding-large);
-  height: 32px;
+  height: 40px;
 
   background-color: var(--primary-color);
   color: white;
@@ -170,7 +169,7 @@ footer {
   background-color: var(--card-color);
 
   padding: 12px;
-  max-width: 500px;
+  max-width: 700px;
 
   border-radius: 8px;
 }

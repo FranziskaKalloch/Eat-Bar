@@ -29,7 +29,8 @@
   width: 300px;
   position: absolute;
   top: 500px;
-  right: 0;
+  right: 50px;
+  border-radius: 16px;
 
   background-color: var(--basket-color);
 }
