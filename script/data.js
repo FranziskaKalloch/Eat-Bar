@@ -48,7 +48,7 @@ let pizzas = [
   {
     name: 'Pizza Tomate Mozzarella',
     description: 'Tomato sauce, Mozzarella',
-    img: './assets/img/tomate-mozarella.jpg',
+    img: './assets/img/pizza-tomate-mozarella.jpg',
     price: 10.9,
   },
 

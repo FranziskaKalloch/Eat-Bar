@@ -12,4 +12,87 @@ function init() {
   burgerRef.innerHTML += `
     <h3>${singleBurger.name}</h3>
   `; // wie füge ich in das DOM den Burger Namen ein!
+
+  // Jettz das ganze Template, Aber mit nur einem Burger
+
+  burgerRef.innerHTML += `
+  
+    <div class="single-menu">
+                <div class="menu-img">
+                  <img src="${singleBurger.img}" alt="Cheese Burger" />
+                </div>
+
+                <div class="menu-info">
+                  <div class="menu-head">
+                    <h3>${singleBurger.name}</h3>
+                    <p>${singleBurger.price} €</p>
+                  </div>
+
+                  <div class="menu-description">
+                    <p>${singleBurger.description}</p>
+                  </div>
+
+                  <div class="menu-footer">
+                    <button class="main-button">Add to basket</button>
+                  </div>
+                </div>
+              </div>
+  `;
+}
+
+// Um alle Burger einzufügen wird die Schleife benötigt!
+// --> Nächster Schritt:
+// Schleife → einzelnes Objekt → console.log
+
+function init() {
+  let burgerRef = document.getElementById('burgerCards');
+
+  for (let index = 0; index < burgers.length; index++) {
+    const singleBurger = burgers[index];
+    console.log(singleBurger.name); // wenn ich nur singleBurger schreibe, wird jeeder burger mit allen anderen Eigenschaften aufgelistet
+    // console.log(singleBurger.price); ---> Der Preis von jedem Burger
+
+    // hier kommt noch das Template von oben rein und alle Bilder plus Daten wurden gerendert
+  }
+}
+
+// Das Template muss in die Schleife geschrieben werden, weil:
+// 	•	Die Daten sind immer im Array
+//	•	aber du brauchst die Schleife, um jedes Element einzeln zu verarbeiten
+
+// so sieht es dann komplett fertig aus:
+
+function init() {
+  let burgerRef = document.getElementById('burgerCards');
+
+  burgerRef.innerHTML = ''; // Container muss vorher geleert werden
+
+  for (let index = 0; index < burgers.length; index++) {
+    const singleBurger = burgers[index];
+    console.log(singleBurger.name);
+
+    burgerRef.innerHTML += `
+  
+    <div class="single-menu">
+                <div class="menu-img">
+                  <img src="${singleBurger.img}" alt="Cheese Burger" />
+                </div>
+
+                <div class="menu-info">
+                  <div class="menu-head">
+                    <h3>${singleBurger.name}</h3>
+                    <p>${singleBurger.price} €</p>
+                  </div>
+
+                  <div class="menu-description">
+                    <p>${singleBurger.description}</p>
+                  </div>
+
+                  <div class="menu-footer">
+                    <button class="main-button">Add to basket</button>
+                  </div>
+                </div>
+              </div>
+  `;
+  }
 }
