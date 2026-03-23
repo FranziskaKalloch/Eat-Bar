@@ -96,3 +96,29 @@ function init() {
   `;
   }
 }
+
+// wird jetzt nicht mehr gebraucht, da wir ein template für beides haben:
+function templateAUSORTIERT() {
+  <div class="single-menu">
+    <div class="menu-img">
+      <img src="${singlePizza.img}" alt="${singlePizza.name}" />
+    </div>
+
+    <div class="menu-info">
+      <div class="menu-head">
+        <h3>${singlePizza.name}</h3>
+        <p>${singlePizza.price} €</p>
+      </div>
+
+      <div class="menu-description">
+        <p>${singlePizza.description}</p>
+      </div>
+
+      <div class="menu-footer">
+        <button class="main-button" onclick="addToBasket()">
+          Add to basket
+        </button>
+      </div>
+    </div>
+  </div>;
+}

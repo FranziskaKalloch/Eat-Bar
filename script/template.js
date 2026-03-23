@@ -1,27 +1,24 @@
-
-
-
-<div class="single-menu">
+function getMenuTemplate(meal) {
+  return `
+    <div class="single-menu">
                 <div class="menu-img">
-                  <img src="./assets/img/cheese-burger.jpg" alt="Cheese Burger" />
+                  <img src="${meal.img}" alt="${meal.name}" />
                 </div>
 
                 <div class="menu-info">
                   <div class="menu-head">
-                    <h3>Name</h3>
-                    <p>Price</p>
+                    <h3>${meal.name}</h3>
+                    <p>${meal.price} €</p>
                   </div>
 
                   <div class="menu-description">
-                    <p>Beschreibung</p>
+                    <p>${meal.description}</p>
                   </div>
 
                   <div class="menu-footer">
-                    <button class="main-button">Add to basket</button>
+                    <button class="main-button" onclick="addToBasket()">Add to basket</button>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  `;
+}
