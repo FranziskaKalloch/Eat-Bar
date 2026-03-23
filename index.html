@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eat Bar</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/wrapper.css" />
+    <link rel="stylesheet" href="./styles/frame.css" />
     <link rel="stylesheet" href="./styles/basket.css" />
     <script src="./script/data.js" defer></script>
     <script src="./script/main.js" defer></script>
@@ -13,168 +13,162 @@
 
     <link rel="icon" type="image/x-icon" href="./assets/icon/icons8-mahlzeit-96.png" />
   </head>
+
   <body>
     <header>
-      <div class="content-wrapper-header">
+      <div class="frame-header">
         <div class="logo-container">
           <img class="logo" src="./assets/eat-bar-logo.png" alt="Eat Bar Logo" />
           <span>food delivery</span>
         </div>
+
         <div>
           <img src="./assets/icon/icons8-menü-50.png" alt="Menu Icon" />
         </div>
       </div>
     </header>
 
-    <!----  WELCOME SECTION  ------>
-
     <section class="welcome">
-      <img src="./assets/img/headline-img.png" class="main-img" />
-      <img src="./assets/icon/imbisswagen.png" class="main-icon" />
+      <img src="./assets/img/headline-img.png" class="main-img" alt="Burger headline image" />
+      <img src="./assets/icon/imbisswagen.png" class="main-icon" alt="Food truck icon" />
+
       <div class="headline">
         <div class="burger-house">
           <h1>Burger<span class="highlight">House</span></h1>
+
           <div class="star-container">
-            <img src="./assets/icon/icons8-stern.png" class="star-img" />
+            <img src="./assets/icon/icons8-stern.png" class="star-img" alt="Star icon" />
             <span>4,5 (4000)</span>
           </div>
         </div>
 
-        <span class="welcome-text">Best of burgers, Pizza, and Greens, all in one great place.</span>
+        <span class="welcome-text"> Best of burgers, Pizza, and Greens, all in one great place. </span>
       </div>
     </section>
 
-    <div class="content-wrapper-main">
+    <main class="page-content">
+      <!---------------- BURGER SECTION ---------------->
       <section class="menu-section">
         <div class="menu-header">
-          <img src="./assets/icon/burger.png" class="burger-icon" />
-          <h2>Burger</h2>
+          <div class="menu-header-inner">
+            <img src="./assets/icon/burger.png" class="burger-icon" alt="Burger icon" />
+            <h2>Burger</h2>
+          </div>
         </div>
 
-        <!----- BURGER SECTION ---->
-
-        <div class="meal-wrapper">
-          <div class="card-container">
-
-            <div class="single-menu">
-              <div class="menu-img">
-                <img src="./assets/img/cheese-burger.jpg"/>
-              </div>
-
-              <div class="menu-info">
-                <div class="menu-head">
-                  <h3>Name</h3>
-                  <p>Price</p>
+        <div class="frame-main">
+          <div class="frame-meal">
+            <div class="card-container" id="burgerCards">
+              <div class="single-menu">
+                <div class="menu-img">
+                  <img src="./assets/img/cheese-burger.jpg" alt="Cheese Burger" />
                 </div>
 
-               <div class="menu-description">
+                <div class="menu-info">
+                  <div class="menu-head">
+                    <h3>Name</h3>
+                    <p>Price</p>
+                  </div>
+
+                  <div class="menu-description">
+                    <p>Beschreibung</p>
+                  </div>
+
+                  <div class="menu-footer">
+                    <button class="main-button">Add to basket</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------------- PIZZA SECTION ---------------->
+      <section class="menu-section">
+        <div class="menu-header">
+          <div class="menu-header-inner">
+            <img src="./assets/icon/pizza.png" class="burger-icon" alt="Pizza icon" />
+            <h2>Pizza (30cm)</h2>
+          </div>
+        </div>
+
+        <div class="frame-main">
+          <div class="frame-meal">
+            <div class="card-container" id="pizzaCards">
+              <div class="single-menu">
+                <div class="menu-img">
+                  <img src="./assets/img/pizza-vier-käse.jpg" alt="Pizza Quattro Formaggi" />
+                </div>
+
+                <div class="menu-info">
+                  <div class="menu-head">
+                    <h3>Name</h3>
+                    <p>Price</p>
+                  </div>
+
+                  <div class="menu-description">
+                    <p>Beschreibung</p>
+                  </div>
+
+                  <div class="menu-footer">
+                    <button class="main-button">Add to basket</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------------- BASKET ---------------->
+      <div class="frame-main basket-area">
+        <aside class="frame-basket">
+          <div class="basket">
+            <div class="basket-headline">
+              <h3>Your Basket</h3>
+            </div>
+
+            <div id="basketContent">
+              <div class="basket-menu-card">
+                <div class="basket-menu-description">
                   <p>Beschreibung</p>
                 </div>
 
-              <div class="menu-footer">
-                <button class="main-button">Add to basket</button>
+                <div class="basket-menu-footer">
+                  <img src="./assets/icon/delete-black.png" alt="Delete icon" />
+                  <span>Price</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          </div>
-        </div>
-      </section>
-
-      <section class="menu-section">
-        <div class="menu-header">
-          <img src="./assets/icon/pizza.png" class="burger-icon" />
-          <h2>Pizza</h2>
-        </div>
-
-         <!----- PIZZA SECTION ---->
-
-        <div class="meal-wrapper">
-  <div class="card-container">
-
-    <!---- TEMPLATE ------>
-    <div class="single-menu">
-      <div class="menu-img">
-         <img src="./assets/img/pizza-vier-käse.jpg"/>
-      </div>
-
-      <div class="menu-info">
-        <div class="menu-head">
-          <h3>Name</h3>
-          <p>Price</p>
-        </div>
-
-        <div class="menu-description">
-          <p>Beschreibung</p>
-        </div>
-
-        <div class="menu-footer">
-          <button class="main-button">Add to basket</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-        </div>
-      </section>
-
-       <!----  BASKET   ------>
-
-      <aside class="basket-wrapper">
-        <div class="basket">
-          <div class="basket-headline">
-            <h3>Your Basket</h3>
-          </div>
-
-          <!----  BASKET TEMPLATE  ------>
-          
-
-          <div id="basketContent">
-
-           <!----  EMPTY STATE  ------>
-
-          <!----  Filled STATE  ------>
-
-            <div class="basket-menu-card">
-             
-              <div class="basket-menu-description">
-                <p>Beschreibung</p>
+            <div class="sum-section">
+              <div class="sum-row">
+                <p>Subtotal</p>
+                <p>Price</p>
               </div>
 
-              <div class="basket-menu-footer">
-                <img src="./assets/icon/delete-black.png">
-                <span>Price</span>
+              <div class="sum-row">
+                <p>Delivery Fee</p>
+                <p>Price</p>
               </div>
 
+              <div class="sum-row total-row">
+                <p>Total</p>
+                <p>Price</p>
+              </div>
+
+              <button class="basket-btn">Buy Now (price)</button>
             </div>
           </div>
+        </aside>
+      </div>
+    </main>
 
-           <!----  SUM SECTION  ------>
-
-             <div class="sum-section">
-                <div class="sum-row">
-                  <p>Subtotal</p>
-                  <p>Price</p>
-                </div>
-                <div class="sum-row">
-                  <p>Delivery Fee</p>
-                  <p>Price</p>
-                </div>
-                <div class="sum-row total-row">
-                  <p>Total</p>
-                  <p>Price</p>
-                </div>
-                <button class="basket-btn">Buy Now (price)</button>
-              </div>
-
-        </div>
-      </aside>
-    </div>
-
-    <!----  FOOTER   ------>
-    <footer style="display: flex; justify-content: center">
-      <img class="logo" src="./assets/eat-bar-logo.png" alt="Eat Bar Logo" />
+    <footer>
+      <div class="frame-header">
+        <img class="logo" src="./assets/eat-bar-logo.png" alt="Eat Bar Logo" />
+      </div>
     </footer>
   </body>
 </html>

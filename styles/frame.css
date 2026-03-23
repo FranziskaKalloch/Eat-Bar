@@ -1,31 +1,28 @@
-.content-wrapper-header {
-  max-width: 1920px;
+.frame-header {
+  max-width: 1440px;
+  width: 100%;
+  padding-inline: var(--padding-large);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding-inline: var(--padding-large);
 }
 
-.content-wrapper-main {
+.frame-main {
   max-width: 1920px;
   width: 100%;
-
   margin: 0 auto;
 
-  position: relative;
-
-  gap: 4px;
+  flex: 1;
 }
 
-.meal-wrapper {
+.frame-meal {
   padding-left: var(--padding-xl);
   padding-top: 16px;
   padding-bottom: 16px;
 }
 
-.basket-wrapper {
+.frame-basket {
   width: 300px;
   position: absolute;
   top: 500px;

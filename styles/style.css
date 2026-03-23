@@ -28,22 +28,28 @@
   --font-size-large: 24px;
 }
 
-.body {
-  display: flex;
-  flex-direction: column;
-}
-
 header {
   background-color: var(--primary-color);
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 body {
   background-color: var(--bg-color);
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100dvh;
 }
 
 footer {
   background-color: var(--primary-color);
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
 }
 
 .logo-container {
@@ -140,14 +146,23 @@ footer {
 }
 
 .menu-header {
-  display: flex;
-  align-items: center;
-
-  gap: 16px;
-  padding-inline: var(--padding-large);
-  height: 40px;
+  width: 100%;
+  margin: 0 auto;
 
   background-color: var(--primary-color);
+}
+
+.menu-header-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  height: 60px;
+
   color: white;
 }
 
