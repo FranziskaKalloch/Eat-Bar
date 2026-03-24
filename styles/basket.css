@@ -20,6 +20,9 @@
 
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
+  gap: 8px;
 
   color: var(--basket-color);
 

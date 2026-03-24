@@ -21,4 +21,34 @@ function init() {
   }
 }
 
-function addToBasket(type, index) {}
+function addToBasket(type, index) {
+  if (type == 'burger') {
+    basket.push(burgers[index]);
+  } else {
+    basket.push(pizzas[index]);
+  }
+
+  renderBasket();
+}
+
+function renderBasket() {
+  let basketRef = document.getElementById('basketContent');
+  basketRef.innerHTML = '';
+
+  for (let index = 0; index < basket.length; index++) {
+    const basketElements = basket[index];
+
+    basketRef.innerHTML += `
+    <div class="basket-menu-card">
+      <div class="basket-menu-description">
+        <p>1x <strong>${basketElements.name}</strong></p>
+        <p>${basketElements.description}</p>
+      </div>
+      <div class="basket-menu-footer">
+        <img src="./assets/icon/delete-black.png" alt="${basketElements.name}" />
+        <span>${basketElements.price} €</span>
+      </div>
+    </div>
+    `;
+  }
+}

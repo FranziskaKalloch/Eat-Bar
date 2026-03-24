@@ -130,3 +130,9 @@ function templateAUSORTIERT() {
 // der Funktion addToBasket muss etwas mitgegeben werden, damit JS weiß, was er in den Basket schiebt, also welches menu
 
 onclick = 'addToBasket(${index})';
+
+// WARENKORB
+// 👉 addToBasket soll NUR:
+//1. richtiges Objekt holen
+//2. in basket pushen
+//3. renderBasket() aufrufen
