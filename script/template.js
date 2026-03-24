@@ -1,4 +1,4 @@
-function getMenuTemplate(meal) {
+function getMenuTemplate(meal, index, type) {
   return `
     <div class="single-menu">
                 <div class="menu-img">
@@ -16,7 +16,7 @@ function getMenuTemplate(meal) {
                   </div>
 
                   <div class="menu-footer">
-                    <button class="main-button" onclick="addToBasket()">Add to basket</button>
+                    <button class="main-button" onclick="addToBasket('${type}', ${index})">Add to basket</button>
                   </div>
                 </div>
               </div>

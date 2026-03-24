@@ -122,3 +122,11 @@ function templateAUSORTIERT() {
     </div>
   </div>;
 }
+
+<button class="main-button" onclick="addToBasket()">
+  Add to basket
+</button>;
+
+// der Funktion addToBasket muss etwas mitgegeben werden, damit JS weiß, was er in den Basket schiebt, also welches menu
+
+onclick = 'addToBasket(${index})';

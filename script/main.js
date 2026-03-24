@@ -1,3 +1,5 @@
+let basket = [];
+
 function init() {
   let burgerRef = document.getElementById('burgerCards');
   burgerRef.innerHTML = '';
@@ -6,7 +8,7 @@ function init() {
     const singleBurger = burgers[index];
     console.log(singleBurger.name);
 
-    burgerRef.innerHTML += `${getMenuTemplate(singleBurger)}`;
+    burgerRef.innerHTML += `${getMenuTemplate(singleBurger, index, 'burger')}`;
   }
 
   let pizzaRef = document.getElementById('pizzaCards');
@@ -15,6 +17,8 @@ function init() {
   for (let index = 0; index < pizzas.length; index++) {
     const singlePizza = pizzas[index];
 
-    pizzaRef.innerHTML += `${getMenuTemplate(singlePizza)}`;
+    pizzaRef.innerHTML += `${getMenuTemplate(singlePizza, index, 'pizza')}`;
   }
 }
+
+function addToBasket(type, index) {}
