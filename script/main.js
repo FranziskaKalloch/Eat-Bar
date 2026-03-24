@@ -29,6 +29,25 @@ function addToBasket(type, index) {
   }
 
   renderBasket();
+
+  let clickedItem;
+
+  if (type === 'burger') {
+    clickedItem = burgers[index];
+  } else {
+    clickedItem = pizzas[index];
+  }
+
+  let foundItem = basket.find(function (element) {
+    return element.name === clickedItem.name;
+  });
+
+  if (foundItem == undefined) {
+    clickedItem.amount = 1;
+    basket.push(clickedItem);
+  } else {
+    foundItem.amount++;
+  }
 }
 
 function renderBasket() {

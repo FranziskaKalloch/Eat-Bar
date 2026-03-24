@@ -136,3 +136,62 @@ onclick = 'addToBasket(${index})';
 //1. richtiges Objekt holen
 //2. in basket pushen
 //3. renderBasket() aufrufen
+
+function addToBasket(type, index) {
+  if (type == 'burger') {
+    basket.push(burgers[index]);
+  } else {
+    basket.push(pizzas[index]);
+  }
+
+  renderBasket();
+}
+
+
+
+// ## **Warenkorb-Mengenlogik**
+
+//1. Angeclicktes Produkt bestimmen
+//2. Im basket prüfen, ob ein Produkt mit gleichem Namen schon existiert
+//3. Wenn **nein**:
+//    - neues Objekt in den Basket pushen
+//    - mit amount: 1
+//4. Wenn **ja**:
+//    - vorhandenes Objekt finden
+//    - amount um 1 erhöhen
+//5. Danach renderBasket() aufrufen
+
+// DER BUTTON addToBasket() gibt schon alle Informationen,
+// die ich für die Abfrage benötige!
+// in der Funktion wird type ="burger" und index="1" ausgegeben
+// -----> das ist die Verbindung
+
+// 👉 Button → übergibt Werte → Funktion bekommt sie
+
+// „Ich gehe durch den Basket und prüfe, ob der Name gleich ist“
+
+let clickedItem; // Variable ohne Wert
+
+if (type === "burger") {
+  clickedItem = burger[index]; 
+}
+else {
+  clickedItem = pizza[index];
+}
+
+//clickedItem ist jetzt ein Objekt:
+// ----> mit name, price und description
+
+// Jetzt wird im Basket gesucht, ob es das Item ist, was benötigt wird
+
+
+basket.find(function(element) {
+  return element.name === clickedItem.name;
+});
+
+// Das Ergebnis aus dieser Funktion wird noch nicht genutzt
+// Das Ergebnis muss erst gespeichert werden!
+
+let foundItem = basket.find(function(element) {
+  return element.name === clickedItem.name;
+});
