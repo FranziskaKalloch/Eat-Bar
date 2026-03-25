@@ -47,6 +47,8 @@ function addToBasket(type, index) {
 
 function renderBasket() {
   let basketRef = document.getElementById('basketContent');
+  let sumSectionRef = document.getElementById('sumSection');
+
   basketRef.innerHTML = '';
 
   if (basket.length === 0) {
@@ -57,21 +59,22 @@ function renderBasket() {
       <img src="./assets/icon/imbisswagen.png">
     </div> 
     `;
+
+    sumSectionRef.style.display = 'none';
   } else {
     for (let index = 0; index < basket.length; index++) {
       const basketElements = basket[index];
 
       basketRef.innerHTML += `${getBasketTemplate(basketElements, index)}`;
     }
+    sumSectionRef.style.display = 'flex';
   }
+
+  calculatePrice();
 }
 
 function deleteItem(index) {
-  if (basket[index].amount === 1) {
-    basket.splice(index, 1);
-  } else {
-    basket[index].amount--;
-  }
+  basket.splice(index, 1);
 
   renderBasket();
 }
@@ -92,15 +95,18 @@ function decreaseItem(index) {
   renderBasket();
 }
 
-function calculatePrice(index) {
-  // Gesamtsumme berechnen
-  // hierfür benötige ich den Preis jedes einzelnen Objektes burgers[index].price / pizzas[index].price
-  let singleMealPrice = bugers[index].price; // ??? wahrscheinlich muss das anders & es muss auch der Pizza Preis berücksichtig werden
+function calculatePrice() {
+  let subTotal = 0;
 
-  let sum = singleMealPrice * quantity;
+  basket.forEach((element) => {
+    subTotal += element.price * element.amount;
+  });
 
-  let subTotal; // Summe aller Artikel
   let deliveryFee = 2.5;
-
   let totalPrice = subTotal + deliveryFee;
+
+  document.getElementById('subTotal').innerText = `${subTotal.toFixed(2)} €`;
+  document.getElementById('deliveryFee').innerText = ` ${deliveryFee.toFixed(2.0)} €`;
+  document.getElementById('totalPrice').innerText = `${totalPrice.toFixed(2)} €`;
+  document.getElementById('buyButton').innerText = `Buy Now (${totalPrice.toFixed(0)}) €`;
 }

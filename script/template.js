@@ -41,28 +41,7 @@ function getBasketTemplate(basketElements, index) {
 
          <span>${basketElements.price} €</span>
         </div>
-       </div>
-
-        <div class="sum-section">
-          <div class="sum-row">
-            <p>Subtotal</p>
-            <p>Price</p>
-          </div>
-
-          <div class="sum-row">
-            <p>Delivery Fee</p>
-            <p>Price</p>
-          </div>
-
-          <div class="sum-row total-row">
-            <p>Total</p>
-            <p>Price</p>
-          </div>
-
-          <button class="basket-btn">Buy Now (price)</button>
-        </div>
-
-   
+       </div> 
      `;
   } else {
     return `
@@ -89,24 +68,6 @@ function getBasketTemplate(basketElements, index) {
 
         <span>${basketElements.price}</span>
     </div>
-  </div>
-
-  <div class="sum-section">
-    <div class="sum-row">
-        <p>Subtotal</p>
-        <p>Price</p>
-    </div>
-
-    <div class="sum-row">
-        <p>Delivery Fee</p>
-        <p>Price</p>
-    </div>
-
-    <div class="sum-row total-row">
-        <p>Total</p>
-        <p>Price</p>
-    </div>
-        <button class="basket-btn">Buy Now (price)</button>
   </div>
     `;
   }
