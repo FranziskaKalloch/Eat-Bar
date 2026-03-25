@@ -43,12 +43,34 @@
   flex-direction: column;
 }
 
+.basket-menu-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.basket-menu-description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .basket-menu-footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 
   flex: 1;
+}
+
+.basket-footer-left-group {
+  display: flex;
+  align-items: center;
+}
+
+.delete-icon {
+  width: 16px;
+  height: 16px;
 }
 
 .sum-section {
@@ -70,6 +92,25 @@
   padding-top: 6px;
 }
 
+/*          BUTTONS     */
+
+.plus-minus-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  width: 17px;
+  height: 17px;
+}
+
 .basket-btn {
   padding: 5px 10px 5px 10px;
 
@@ -78,4 +119,18 @@
 
   color: white;
   background-color: var(--primary-color);
+}
+
+/* EMPTY BASKET CONTEXT */
+
+.empty-basket-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  gap: 64px;
 }
