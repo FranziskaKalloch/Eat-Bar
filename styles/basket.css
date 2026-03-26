@@ -1,3 +1,13 @@
+.frame-basket {
+  position: relative;
+  top: -50px;
+  width: 320px;
+  flex-shrink: 0;
+  border-radius: 16px;
+
+  background-color: var(--basket-color);
+}
+
 .basket {
   width: 100%;
   height: 626px;

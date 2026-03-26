@@ -80,3 +80,27 @@ function emptyBasketHtml() {
       <img src="./assets/icon/imbisswagen.png">
     </div> `;
 }
+
+function getButtonText() {
+  return `
+  
+  `;
+}
+
+// im basket suchen
+
+// wenn nicht gefunden:
+// return "Add to basket"
+
+// wenn gefunden:
+// return `Added (${amount})`
+
+//1.	Du klickst auf Button
+//2.	addToBasket() wird ausgeführt
+//3.	basket wird verändert
+//4.	Du rufst render() auf
+//5.	ALLE Karten werden neu gebaut
+//6.	Jede Karte entscheidet selbst:
+//•	„Bin ich im basket?“
+//•	„Wie oft?“
+//•	→ Buttontext

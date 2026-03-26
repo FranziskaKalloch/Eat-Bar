@@ -28,6 +28,17 @@
   --font-size-large: 24px;
 }
 
+.frame-header {
+  max-width: 1440px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-right: 32px;
+}
+
 header {
   background-color: var(--primary-color);
   width: 100%;
@@ -54,11 +65,6 @@ body {
 
 .footer-mobile {
   display: none;
-
-  justify-content: space-evenly;
-  padding: 32px;
-
-  background-color: var(--basket-color);
 }
 
 .logo-container {
