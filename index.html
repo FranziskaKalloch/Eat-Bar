@@ -46,6 +46,7 @@
       </div>
     </section>
 
+    <!---------------- PAGE CONTENT---------------->
     <main class="page-content">
       <!---------------- BURGER SECTION ---------------->
       <section class="menu-section">
@@ -60,6 +61,36 @@
           <div class="frame-meal">
             <div class="card-container" id="burgerCards"></div>
           </div>
+
+          <!---------------- BASKET ---------------->
+          <aside class="frame-basket">
+            <div class="basket">
+              <div class="basket-headline">
+                <h3>Your Basket</h3>
+              </div>
+
+              <div id="basketContent"></div>
+
+              <div class="sum-section" id="sumSection">
+                <div class="sum-row">
+                  <p>Subtotal</p>
+                  <p id="subTotal">Price</p>
+                </div>
+
+                <div class="sum-row">
+                  <p>Delivery Fee</p>
+                  <p id="deliveryFee">Price</p>
+                </div>
+
+                <div class="sum-row total-row">
+                  <p>Total</p>
+                  <p id="totalPrice">Price</p>
+                </div>
+
+                <button class="basket-btn" id="buyButton" onclick="openDialog()">Buy Now (price)</button>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -78,38 +109,6 @@
           </div>
         </div>
       </section>
-
-      <!---------------- BASKET ---------------->
-      <div class="frame-main basket-area">
-        <aside class="frame-basket">
-          <div class="basket">
-            <div class="basket-headline">
-              <h3>Your Basket</h3>
-            </div>
-
-            <div id="basketContent"></div>
-
-            <div class="sum-section" id="sumSection">
-              <div class="sum-row">
-                <p>Subtotal</p>
-                <p id="subTotal">Price</p>
-              </div>
-
-              <div class="sum-row">
-                <p>Delivery Fee</p>
-                <p id="deliveryFee">Price</p>
-              </div>
-
-              <div class="sum-row total-row">
-                <p>Total</p>
-                <p id="totalPrice">Price</p>
-              </div>
-
-              <button class="basket-btn" id="buyButton" onclick="openDialog()">Buy Now (price)</button>
-            </div>
-          </div>
-        </aside>
-      </div>
     </main>
 
     <footer>
@@ -125,9 +124,9 @@
           <button class="plus-minus-btn" onclick="closeDialog()">X</button>
         </div>
         <div class="dialog-content">
-          <img src="./assets/icon/order-confirmed.png" />
+          <img src="./assets/icon/order-confirmed.png" alt="Order confirmed" />
           <h2>Order confirmed</h2>
-          <p>Your foot is on the way!</p>
+          <p>Your food is on the way!</p>
         </div>
       </div>
     </dialog>

@@ -8,25 +8,26 @@
 }
 
 .frame-main {
-  max-width: 1920px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 
-  flex: 1;
+  display: flex;
+  gap: 24px;
 }
 
 .frame-meal {
+  flex: 1;
+
   padding-top: 16px;
   padding-bottom: 16px;
-  margin: 0 auto;
-  max-width: 1440px;
 }
 
 .frame-basket {
-  width: 300px;
-  position: absolute;
-  top: 500px;
-  right: 100px;
+  position: relative;
+  top: -50px;
+  width: 320px;
+  flex-shrink: 0;
   border-radius: 16px;
 
   background-color: var(--basket-color);

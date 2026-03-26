@@ -139,6 +139,11 @@ footer {
   padding-bottom: 16px;
 }
 
+.page-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 /*   MENU AREA    */
 
 .menu-area {
