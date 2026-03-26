@@ -43,10 +43,12 @@ function addToBasket(type, index) {
   }
 
   renderBasket();
+  counter();
 }
 
 function renderBasket() {
   let basketRef = document.getElementById('basketContent');
+  let basketOverlay = document.getElementById('basketContentMobile'); ///
   let sumSectionRef = document.getElementById('sumSection');
   let basketCss = document.querySelector('.basket');
 
@@ -64,6 +66,10 @@ function renderBasket() {
       const basketElements = basket[index];
 
       basketRef.innerHTML += `${getBasketTemplate(basketElements, index)}`;
+
+      basketOverlay.innerHTML += `
+       ${getBasketTemplate(basketElements, index)}
+    `;
     }
 
     sumSectionRef.style.display = 'flex';
@@ -109,6 +115,11 @@ function calculatePrice() {
   document.getElementById('deliveryFee').innerText = ` ${deliveryFee.toFixed(2.0)} €`;
   document.getElementById('totalPrice').innerText = `${totalPrice.toFixed(2)} €`;
   document.getElementById('buyButton').innerText = `Buy Now (${totalPrice.toFixed(0)}) €`;
+
+  document.getElementById('subTotalMobile').innerText = `${subTotal.toFixed(2)} €`;
+  document.getElementById('deliveryFeeMobile').innerText = ` ${deliveryFee.toFixed(2.0)} €`;
+  document.getElementById('totalPriceMobile').innerText = `${totalPrice.toFixed(2)} €`;
+  document.getElementById('buyButtonMobile').innerText = `Buy Now (${totalPrice.toFixed(0)}) €`;
 }
 
 function openDialog() {
@@ -127,4 +138,16 @@ function openBasketOverlay() {
 
 function closeBasketOverlay() {
   document.getElementById('basketOverlay').classList.add('d-none');
+}
+
+function counter() {
+  let count = 0;
+
+  let counterRef = document.getElementById('basketCount');
+
+  for (let index = 0; index < basket.length; index++) {
+    const amount = basket[index].amount; // Hier werden nur Strings aneinander gehängt
+    count = count + amount;
+  }
+  counterRef.innerText = count;
 }
