@@ -48,26 +48,26 @@ function addToBasket(type, index) {
 function renderBasket() {
   let basketRef = document.getElementById('basketContent');
   let sumSectionRef = document.getElementById('sumSection');
+  let basketCss = document.querySelector('.basket');
 
   basketRef.innerHTML = '';
 
   if (basket.length === 0) {
     basketRef.innerHTML += `
-    <div class="empty-basket-text">
-      <p>Nothing here yet.<br>
-      Go ahead and choose something delicious!</p>
-      <img src="./assets/icon/imbisswagen.png">
-    </div> 
+        ${emptyBasketHtml()}
     `;
 
     sumSectionRef.style.display = 'none';
+    basketCss.style.justifyContent = 'space-evenly';
   } else {
     for (let index = 0; index < basket.length; index++) {
       const basketElements = basket[index];
 
       basketRef.innerHTML += `${getBasketTemplate(basketElements, index)}`;
     }
+
     sumSectionRef.style.display = 'flex';
+    basketCss.style.justifyContent = 'space-between';
   }
 
   calculatePrice();
@@ -109,4 +109,14 @@ function calculatePrice() {
   document.getElementById('deliveryFee').innerText = ` ${deliveryFee.toFixed(2.0)} €`;
   document.getElementById('totalPrice').innerText = `${totalPrice.toFixed(2)} €`;
   document.getElementById('buyButton').innerText = `Buy Now (${totalPrice.toFixed(0)}) €`;
+}
+
+function openDialog() {
+  let dialog = document.getElementById('orderDialog');
+  dialog.showModal();
+}
+
+function closeDialog() {
+  let dialog = document.getElementById('orderDialog');
+  dialog.close();
 }

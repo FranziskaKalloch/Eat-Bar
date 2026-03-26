@@ -8,7 +8,7 @@ function getMenuTemplate(meal, index, type) {
                 <div class="menu-info">
                   <div class="menu-head">
                     <h3>${meal.name}</h3>
-                    <p>${meal.price} €</p>
+                    <p>${meal.price.toFixed(2)} €</p>
                   </div>
 
                   <div class="menu-description">
@@ -39,7 +39,7 @@ function getBasketTemplate(basketElements, index) {
             <button class="plus-minus-btn" onclick="increaseItem(${index})">1+</button>
           </div>
 
-         <span>${basketElements.price} €</span>
+         <span>${basketElements.price.toFixed(2)} €</span>
         </div>
        </div> 
      `;
@@ -66,11 +66,17 @@ function getBasketTemplate(basketElements, index) {
           <button class="plus-minus-btn" onclick="increaseItem(${index})">+</button>
      </div>
 
-        <span>${basketElements.price}</span>
+        <span>${basketElements.price.toFixed(2)}</span>
     </div>
   </div>
     `;
   }
 }
 
-/// Veränderte Basket Menu Card
+function emptyBasketHtml() {
+  return ` <div class="empty-basket-text">
+      <p>Nothing here yet.<br>
+      Go ahead and choose something delicious!</p>
+      <img src="./assets/icon/imbisswagen.png">
+    </div> `;
+}

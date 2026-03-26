@@ -1,6 +1,8 @@
 let basket = []; // Warenkorb, wo später alle ausgewählten Produkte gespeichert werden
 
 function init() {
+   renderBasket(); // wird als erstes aufgerufen, damit er leere State Warenkorb angezeigt wird. 
+
   let burgerRef = document.getElementById('burgerCards'); // Referenz auf den Burger Container mit HTML holen
   burgerRef.innerHTML = ''; // Container leeren (wichtig, damit nichts doppelt angezeigt wird)
 
@@ -96,54 +98,20 @@ function increaseItem(index) {
   renderBasket();
 }
 
+
 ///
+function decreaseItem(index) {
+  if (basket[index].amount === 1) { // wenn die Menge des Produktes 1 ist, dann entferne das produkt 
+    basket.splice(index, 1);
+  } else {
+    basket[index].amount--; // ansonsten verringere die Menge des Produktes
+  }
 
-<div class="basket-menu-card">
-  <div class="basket-menu-header">
-    <p>
-      x <strong>Name</strong>
-    </p>
-    <button class="delete-btn" onclick="deleteItem()">
-      <img src="./assets/icon/delete-black.png" alt="NAME" class="delete-icon" />
-    </button>
-  </div>
+  renderBasket();
+}
 
-  <div class="basket-menu-description">
-    <p>Description</p>
-  </div>
 
-  <div class="basket-menu-footer">
-    <div class="quantity-control">
-      <button>-</button>
-      <span>Menge</span>
-      <button>+</button>
-    </div>
 
-    <span>PREIS</span>
-  </div>
-</div>;
 
-basketRef.innerHTML += `
-      <div class="basket-menu-card">
-        <div class="basket-menu-header">
-          <p>x <strong>Name</strong></p>
-          <button class="delete-btn" onclick="deleteItem()">
-            <img src="./assets/icon/delete-black.png" alt="NAME" class="delete-icon" />
-          </button>
-       </div>
 
-       <div class="basket-menu-description">
-          <p>Description</p>
-       </div>
 
-      <div class="basket-menu-footer">
-       <div class="quantity-control">
-          <button onclick="decreaseItem(${index})">-</button>
-          <span>Menge</span>
-          <button onclick="increaseItem(${index})">+</button>
-      </div>
-
-        <span>PREIS</span>
-      </div>
-    </div>;
-    `;

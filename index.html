@@ -105,7 +105,7 @@
                 <p id="totalPrice">Price</p>
               </div>
 
-              <button class="basket-btn" id="buyButton">Buy Now (price)</button>
+              <button class="basket-btn" id="buyButton" onclick="openDialog()">Buy Now (price)</button>
             </div>
           </div>
         </aside>
@@ -117,5 +117,19 @@
         <img class="logo" src="./assets/eat-bar-logo.png" alt="Eat Bar Logo" />
       </div>
     </footer>
+
+    <!------- DIALOG --------->
+    <dialog id="orderDialog" class="dialog">
+      <div class="dialog-frame">
+        <div class="dialog-header">
+          <button class="plus-minus-btn" onclick="closeDialog()">X</button>
+        </div>
+        <div class="dialog-content">
+          <img src="./assets/icon/order-confirmed.png" />
+          <h2>Order confirmed</h2>
+          <p>Your foot is on the way!</p>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>
