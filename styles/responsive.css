@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+  .basket {
+    display: none;
+  }
+
+  .footer-desktop {
+    display: none;
+  }
+
+  .footer-mobile {
+    display: flex;
+  }
+}
