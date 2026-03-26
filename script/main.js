@@ -120,3 +120,11 @@ function closeDialog() {
   let dialog = document.getElementById('orderDialog');
   dialog.close();
 }
+
+function openBasketOverlay() {
+  document.getElementById('basketOverlay').classList.remove('d-none');
+}
+
+function closeBasketOverlay() {
+  document.getElementById('basketOverlay').classList.add('d-none');
+}

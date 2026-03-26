@@ -152,3 +152,64 @@
 
   gap: 64px;
 }
+
+/* BASKET OVERLAY  */
+
+.basket-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 2000;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.basket-overlay-content {
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--basket-color);
+  color: white;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.mobile-basket {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+
+  gap: 24px;
+}
+
+#basketContentMobile {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  color: var(--basket-color);
+}
+
+#basketContentMobile .basket-menu-card {
+  width: 100%;
+}
+
+.d-none {
+  display: none;
+}

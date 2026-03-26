@@ -111,11 +111,15 @@
       </section>
     </main>
 
+    <!----- FOOOTER DESKTOP ----->
+
     <footer class="footer-desktop">
       <div class="frame-footer">
         <img class="logo" src="./assets/eat-bar-logo.png" alt="Eat Bar Logo" />
       </div>
     </footer>
+
+    <!----- FOOOTER MOBILE ----->
 
     <footer class="footer-mobile">
       <div class="footer-icon">
@@ -131,10 +135,49 @@
       </div>
 
       <div class="footer-icon basket-icon">
-        <img src="./assets/icon/shopping-cart.png" />
-        <span id="basketCount">0</span>
+        <button class="basket-overlay-btn" onclick="openBasketOverlay()">
+          <img src="./assets/icon/shopping-cart.png" />
+          <span id="basketCount">0</span>
+        </button>
       </div>
     </footer>
+
+    <!----- BASKET OVERLAY----->
+
+    <div id="basketOverlay" class="basket-overlay d-none">
+      <div class="basket-overlay-content">
+        <div class="overlay-header">
+          <button onclick="closeBasketOverlay()" style="color: white; background-color: transparent">X</button>
+        </div>
+
+        <div class="basket mobile-basket">
+          <div class="basket-headline">
+            <h3 style="text-align: center">Your Basket</h3>
+          </div>
+
+          <div id="basketContentMobile"></div>
+
+          <div class="sum-section">
+            <div class="sum-row">
+              <p>Subtotal</p>
+              <p id="subTotalMobile">Price</p>
+            </div>
+
+            <div class="sum-row">
+              <p>Delivery Fee</p>
+              <p id="deliveryFeeMobile">Price</p>
+            </div>
+
+            <div class="sum-row total-row">
+              <p>Total</p>
+              <p id="totalPriceMobile">Price</p>
+            </div>
+
+            <button class="basket-btn" onclick="openDialog()">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!------- DIALOG --------->
     <dialog id="orderDialog" class="dialog">
