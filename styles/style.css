@@ -144,7 +144,8 @@ footer {
   flex-direction: column;
   flex: 1;
 }
-/*   MENU AREA    */
+
+/* -------  MENU AREA  ------------  */
 
 .menu-area {
   flex: 1;
@@ -206,6 +207,13 @@ footer {
   max-width: 700px;
 
   border-radius: 8px;
+
+  transition: transform 0.5s ease-in;
+}
+
+.single-menu:hover {
+  transform: translateY(-10px);
+  box-shadow: 4px 8px 4px 8px rgb(90, 49, 148);
 }
 
 .menu-img img {
