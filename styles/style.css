@@ -72,7 +72,7 @@ header {
   display: none;
 }
 
-/*.*/
+/* HEADER SECTION  */
 
 .logo-container {
   display: flex;
@@ -91,7 +91,19 @@ header {
   height: auto;
 }
 
+/* WELCOME SECTION  */
+
+.welcome-frame {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+}
+
 .welcome {
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative; /*Bezugspunkt zum Imbisswagen icon*/

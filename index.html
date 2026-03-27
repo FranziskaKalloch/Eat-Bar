@@ -28,21 +28,23 @@
       </div>
     </header>
 
-    <section class="welcome">
-      <img src="./assets/img/headline-img.png" class="main-img" alt="Burger headline image" />
-      <img src="./assets/icon/imbisswagen.png" class="main-icon" alt="Food truck icon" />
+    <section class="welcome-frame">
+      <div class="welcome">
+        <img src="./assets/img/headline-img.png" class="main-img" alt="Burger headline image" />
+        <img src="./assets/icon/imbisswagen.png" class="main-icon" alt="Food truck icon" />
 
-      <div class="headline">
-        <div class="burger-house">
-          <h1>Burger<span class="highlight">House</span></h1>
+        <div class="headline">
+          <div class="burger-house">
+            <h1>Burger<span class="highlight">House</span></h1>
 
-          <div class="star-container">
-            <img src="./assets/icon/icons8-stern.png" class="star-img" alt="Star icon" />
-            <span>4,5 (4000)</span>
+            <div class="star-container">
+              <img src="./assets/icon/icons8-stern.png" class="star-img" alt="Star icon" />
+              <span>4,5 (4000)</span>
+            </div>
           </div>
-        </div>
 
-        <span class="welcome-text"> Best of burgers, Pizza, and Greens, all in one great place. </span>
+          <span class="welcome-text"> Best of burgers, Pizza, and Greens, all in one great place. </span>
+        </div>
       </div>
     </section>
 
@@ -87,7 +89,7 @@
                   <p id="totalPrice">Price</p>
                 </div>
 
-                <button class="basket-btn" id="buyButton" onclick="openDialog()">Buy Now (price)</button>
+                <button class="basket-btn" id="buyButton" onclick="reset()" onclick="openDialog()">Buy Now (price)</button>
               </div>
             </div>
           </aside>
@@ -173,7 +175,7 @@
               <p id="totalPriceMobile"></p>
             </div>
 
-            <button class="basket-btn" id="buyButtonMobile" onclick="openDialog()">Buy Now</button>
+            <button class="basket-btn" id="buyButtonMobile" onclick="reset()" onclick="openDialog()">Buy Now</button>
           </div>
         </div>
       </div>

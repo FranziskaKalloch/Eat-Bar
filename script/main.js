@@ -156,6 +156,9 @@ function counter() {
   counterRef.innerText = count;
 }
 
-// leeren Basket im OVerlay anzeigen
-// Nach Bestellung Basket leeren
-// Buy Button deaktivieren, wenn Basket leer ist
+function reset() {
+  basket.length = 0; // basket leeren
+
+  renderBasket();
+  counter();
+}
