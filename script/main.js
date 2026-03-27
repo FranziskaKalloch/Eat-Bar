@@ -48,18 +48,21 @@ function addToBasket(type, index) {
 
 function renderBasket() {
   let basketRef = document.getElementById('basketContent');
-  let basketOverlay = document.getElementById('basketContentMobile'); ///
+  let basketOverlay = document.getElementById('basketContentMobile');
   let sumSectionRef = document.getElementById('sumSection');
+  let sumSecOverlay = document.getElementById('sumSectionOverlay');
   let basketCss = document.querySelector('.basket');
 
   basketRef.innerHTML = '';
+  basketOverlay.innerHTML = '';
 
   if (basket.length === 0) {
-    basketRef.innerHTML += `
-        ${emptyBasketHtml()}
-    `;
+    basketOverlay.innerHTML += ` ${emptyBasketHtml()}`;
+    basketRef.innerHTML += ` ${emptyBasketHtml()}`;
 
     sumSectionRef.style.display = 'none';
+    sumSecOverlay.style.display = 'none';
+
     basketCss.style.justifyContent = 'space-evenly';
   } else {
     for (let index = 0; index < basket.length; index++) {
@@ -73,6 +76,7 @@ function renderBasket() {
     }
 
     sumSectionRef.style.display = 'flex';
+    sumSecOverlay.style.display = 'flex';
     basketCss.style.justifyContent = 'space-between';
   }
 
@@ -119,7 +123,7 @@ function calculatePrice() {
   document.getElementById('subTotalMobile').innerText = `${subTotal.toFixed(2)} €`;
   document.getElementById('deliveryFeeMobile').innerText = ` ${deliveryFee.toFixed(2.0)} €`;
   document.getElementById('totalPriceMobile').innerText = `${totalPrice.toFixed(2)} €`;
-  document.getElementById('buyButtonMobile').innerText = `Buy Now (${totalPrice.toFixed(0)}) €`;
+  document.getElementById('buyButtonMobile').innerText = `Buy Now (${totalPrice.toFixed(2)}) €`;
 }
 
 function openDialog() {
@@ -151,3 +155,7 @@ function counter() {
   }
   counterRef.innerText = count;
 }
+
+// leeren Basket im OVerlay anzeigen
+// Nach Bestellung Basket leeren
+// Buy Button deaktivieren, wenn Basket leer ist
